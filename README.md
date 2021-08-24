@@ -14,7 +14,7 @@
 $ ./build.sh
 ```
 
-#### Live preview
+#### Website preview
 ```shell
 $ ./build.sh serve
 ```
