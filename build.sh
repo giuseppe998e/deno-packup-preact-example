@@ -6,6 +6,7 @@ build() {
     mkdir dist 2> /dev/null || rm -rf dist/*
     sass --no-source-map -s compressed $MAIN_SCSS ${MAIN_SCSS%/*}/app.css
     packup build --static-dir src/static --dir-dist . src/index.html
+    deno run --allow-read --allow-write utils/minify.js
     rm -rf ${MAIN_SCSS%/*}/app.css
 }
 
